@@ -29,7 +29,7 @@ CHAT_ID=Config.CHAT_ID
 playlist=Config.playlist
 LOG_GROUP=Config.LOG_GROUP
 
-HOME_TEXT = "👋🏻 **Hi [{}](tg://user?id={})**,\n\nI'm **Radio Player V3.0** \nI Can Play Radio / Music / YouTube Live In Channel & Group 24x7 Nonstop. Made with ❤️ By @AsmSafone 😉!"
+HOME_TEXT = "👋🏻 **Hello [{}](tg://user?id={})**,\nMy Name Is TG Music Player Bot\n\nI'm a telegram streaming bot with some useful features. Supporting platforms like Youtube,Radio etc."
 HELP_TEXT = """
 💡 --**Setting Up**--:
 
@@ -193,20 +193,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data.lower() == "help":
         buttons = [
-            [
-                InlineKeyboardButton("SEARCH SONGS INLINE", switch_inline_query_current_chat=""),
+                InlineKeyboardButton("Channel", url="https://t.me/AsmSafone"),
+                InlineKeyboardButton("Support", url="https://t.me/AsmSupport"),
             ],
             [
-                InlineKeyboardButton("CHANNEL", url="https://t.me/AsmSafone"),
-                InlineKeyboardButton("SUPPORT", url="https://t.me/AsmSupport"),
-            ],
-            [
-                InlineKeyboardButton("MORE BOTS", url="https://t.me/AsmSafone/173"),
-                InlineKeyboardButton("SOURCE CODE", url="https://github.com/AsmSafone/RadioPlayerV3"),
-            ],
-            [
-                InlineKeyboardButton("BACK HOME", callback_data="home"),
-                InlineKeyboardButton("CLOSE MENU", callback_data="close"),
+                InlineKeyboardButton("<--- Back", callback_data="home"),
+                InlineKeyboardButton("Close Menu", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -221,18 +213,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data.lower() == "home":
         buttons = [
             [
-                InlineKeyboardButton("SEARCH SONGS INLINE", switch_inline_query_current_chat=""),
+                InlineKeyboardButton("➕ Add Me To Your Groups ➕", url=f'http://t.me/{temp.U_NAME}?startgroup=true'),
             ],
             [
-                InlineKeyboardButton("CHANNEL", url="https://t.me/AsmSafone"),
-                InlineKeyboardButton("SUPPORT", url="https://t.me/AsmSupport"),
+                InlineKeyboardButton("Channel", url="https://t.me/+z2h0W6QBubZlNWU9"),
+                InlineKeyboardButton("Support", url="https://t.me/NewMoviesClub2022"),
             ],
             [
-                InlineKeyboardButton("MORE BOTS", url="https://t.me/AsmSafone/173"),
-                InlineKeyboardButton("SOURCE CODE", url="https://github.com/AsmSafone/RadioPlayerV3"),
-            ],
-            [
-                InlineKeyboardButton("❔ HOW TO USE ❔", callback_data="help"),
+                InlineKeyboardButton("🔍 How To Use ❓", callback_data="help"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -259,22 +247,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
 async def start(client, message):
     buttons = [
             [
-                InlineKeyboardButton("SEARCH SONGS INLINE", switch_inline_query_current_chat=""),
+                InlineKeyboardButton("➕ Add Me To Your Groups ➕", url=f'http://t.me/{temp.U_NAME}?startgroup=true'),
             ],
             [
-                InlineKeyboardButton("CHANNEL", url="https://t.me/AsmSafone"),
-                InlineKeyboardButton("SUPPORT", url="https://t.me/AsmSupport"),
+                InlineKeyboardButton("Channel", url="https://t.me/+z2h0W6QBubZlNWU9"),
+                InlineKeyboardButton("Support", url="https://t.me/NewMoviesClub2022"),
             ],
             [
-                InlineKeyboardButton("MORE BOTS", url="https://t.me/AsmSafone/173"),
-                InlineKeyboardButton("SOURCE CODE", url="https://github.com/AsmSafone/RadioPlayerV3"),
-            ],
-            [
-                InlineKeyboardButton("❔ HOW TO USE ❔", callback_data="help"),
+                InlineKeyboardButton("🔍 How To Use ❓", callback_data="help"),
             ]
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
-    m=await message.reply_photo(photo="https://telegra.ph/file/4e839766d45935998e9c6.jpg", caption=HOME_TEXT.format(message.from_user.first_name, message.from_user.id), reply_markup=reply_markup)
+    m=await message.reply_photo(photo="https://telegra.ph/file/f1a46eefaadf8eb6643a7.jpg", caption=HOME_TEXT.format(message.from_user.first_name, message.from_user.id), reply_markup=reply_markup)
     await mp.delete(m)
     await mp.delete(message)
 
@@ -283,25 +267,21 @@ async def start(client, message):
 async def help(client, message):
     buttons = [
             [
-                InlineKeyboardButton("SEARCH SONGS INLINE", switch_inline_query_current_chat=""),
+                InlineKeyboardButton("➕ Add Me To Your Groups ➕", url=f'http://t.me/{temp.U_NAME}?startgroup=true'),
             ],
             [
-                InlineKeyboardButton("CHANNEL", url="https://t.me/AsmSafone"),
-                InlineKeyboardButton("SUPPORT", url="https://t.me/AsmSupport"),
+                InlineKeyboardButton("Channel", url="https://t.me/+z2h0W6QBubZlNWU9"),
+                InlineKeyboardButton("Support", url="https://t.me/NewMoviesClub2022"),
             ],
             [
-                InlineKeyboardButton("MORE BOTS", url="https://t.me/AsmSafone/173"),
-                InlineKeyboardButton("SOURCE CODE", url="https://github.com/AsmSafone/RadioPlayerV3"),
-            ],
-            [
-                InlineKeyboardButton("BACK HOME", callback_data="home"),
-                InlineKeyboardButton("CLOSE MENU", callback_data="close"),
+                InlineKeyboardButton("<--- Back", callback_data="home"),
+                InlineKeyboardButton("Close Menu", callback_data="close"),
             ]
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
     if msg.get('help') is not None:
         await msg['help'].delete()
-    msg['help'] = await message.reply_photo(photo="https://telegra.ph/file/4e839766d45935998e9c6.jpg", caption=HELP_TEXT, reply_markup=reply_markup)
+    msg['help'] = await message.reply_photo(photo="https://telegra.ph/file/f1a46eefaadf8eb6643a7.jpg", caption=HELP_TEXT, reply_markup=reply_markup)
     await mp.delete(message)
 
 
