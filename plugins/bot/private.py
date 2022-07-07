@@ -214,7 +214,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data.lower() == "home":
         buttons = [
             [
-                InlineKeyboardButton("➕ Add Me To Your Groups ➕", url=f'http://t.me/{temp.U_NAME}?startgroup=true'),
+                InlineKeyboardButton("➕ Add Me To Your Groups ➕", url="http://t.me/{temp.U_NAME}?startgroup=true"),
             ],
             [
                 InlineKeyboardButton("Channel", url="https://t.me/+z2h0W6QBubZlNWU9"),
@@ -248,7 +248,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 async def start(client, message):
     buttons = [
             [
-                InlineKeyboardButton("➕ Add Me To Your Groups ➕", url=f'http://t.me/{temp.U_NAME}?startgroup=true'),
+                InlineKeyboardButton("➕ Add Me To Your Groups ➕", url="http://t.me/{temp.U_NAME}?startgroup=true"),
             ],
             [
                 InlineKeyboardButton("Channel", url="https://t.me/+z2h0W6QBubZlNWU9"),
@@ -268,7 +268,7 @@ async def start(client, message):
 async def help(client, message):
     buttons = [
             [
-                InlineKeyboardButton("➕ Add Me To Your Groups ➕", url=f'http://t.me/{temp.U_NAME}?startgroup=true'),
+                InlineKeyboardButton("➕ Add Me To Your Groups ➕", url="http://t.me/{temp.U_NAME}?startgroup=true"),
             ],
             [
                 InlineKeyboardButton("Channel", url="https://t.me/+z2h0W6QBubZlNWU9"),
