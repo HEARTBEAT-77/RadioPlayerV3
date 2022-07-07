@@ -29,7 +29,7 @@ CHAT_ID=Config.CHAT_ID
 playlist=Config.playlist
 LOG_GROUP=Config.LOG_GROUP
 
-HOME_TEXT = "👋🏻 **Hello [{}](tg://user?id={})**,\nMy Name Is TG Music Player Bot\n\nI'm a telegram streaming bot with some useful features. Supporting platforms like Youtube,Radio etc."
+HOME_TEXT = "👋🏻 **Hello [{}](tg://user?id={})**,\n\nMy Name Is TG Music Player Bot\n\nI'm a telegram streaming bot with some useful features. Supporting platforms like Youtube,Radio etc."
 HELP_TEXT = """
 💡 --**Setting Up**--:
 
@@ -62,8 +62,7 @@ HELP_TEXT = """
 \u2022 `/restart` - update & restart the bot
 \u2022 `/setvar` - set/change heroku configs
 
-© **Powered By** : 
-**@AsmSafone | @AsmSupport** 👑
+©️ Created By : @helloheartbeatboss
 """
 
 
@@ -199,7 +198,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],
             [
                 InlineKeyboardButton("<--- Back", callback_data="home"),
-                InlineKeyboardButton("Close Menu", callback_data="close"),
+                InlineKeyboardButton("Close 🔐", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -276,7 +275,7 @@ async def help(client, message):
             ],
             [
                 InlineKeyboardButton("<--- Back", callback_data="home"),
-                InlineKeyboardButton("Close Menu", callback_data="close"),
+                InlineKeyboardButton("Close 🔐", callback_data="close"),
             ]
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
