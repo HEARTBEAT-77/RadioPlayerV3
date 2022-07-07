@@ -193,6 +193,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data.lower() == "help":
         buttons = [
+            [   
                 InlineKeyboardButton("Channel", url="https://t.me/AsmSafone"),
                 InlineKeyboardButton("Support", url="https://t.me/AsmSupport"),
             ],
